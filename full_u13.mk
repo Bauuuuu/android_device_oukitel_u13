@@ -9,7 +9,6 @@ $(call inherit-product, device/oukitel/u13/device.mk)
 # Release name
 PRODUCT_RELEASE_NAME := Oukitel U13
 
-PRODUCT_DEVICE := u13
 PRODUCT_NAME := full_u13
 PRODUCT_BRAND := Oukitel
 PRODUCT_MODEL := U13
