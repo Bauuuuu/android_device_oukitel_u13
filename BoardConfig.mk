@@ -84,7 +84,7 @@ TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
 TARGET_SPECIFIC_HEADER_PATH := device/oukitel/u13/include
 
 # SELinux
-BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
+#BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 
 # Seccomp filter
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
