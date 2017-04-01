@@ -184,3 +184,9 @@ PRODUCT_PACKAGES += \
 
 # Dalvik/HWUI
 $(call inherit-product, frameworks/native/build/phone-xhdpi-2048-dalvik-heap.mk)
+#RIL props
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.kernel.android.checkjni=0 \
+    ro.telephony.ril_class=MT6753 \
+    ro.telephony.ril.config=fakeiccid \
+    ro.com.android.mobiledata=false
