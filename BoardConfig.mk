@@ -81,6 +81,7 @@ TW_DEFAULT_EXTERNAL_STORAGE := true
 endif
 
 TARGET_SYSTEM_PROP := $(LOCAL_PATH)/system.prop
+TARGET_SPECIFIC_HEADER_PATH := device/oukitel/u13/include
 
 # SELinux
 BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
@@ -150,3 +151,6 @@ BOARD_SUPPRESS_EMMC_WIPE := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_15x24.h\"
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
 endif
+
+# Block based ota
+BLOCK_BASED_OTA := false
