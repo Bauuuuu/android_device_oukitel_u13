@@ -85,9 +85,20 @@ service ril-daemon-mtkmd2 /system/bin/mtkrildmd2
     disabled
     oneshot
 
+service md_minilog_util /system/bin/md_minilog_util
+    user radio
+    disabled
+    oneshot
+
 #
 #  Modem related services (Begin)
 #
+
+service permission_check /system/bin/permission_check
+    class main
+    user root
+    group system radio
+    oneshot
 
 service ccci_fsd /system/bin/ccci_fsd 0
     user radio
@@ -103,8 +114,20 @@ service ccci_mdinit /system/bin/ccci_mdinit 0
 
 service ccci_rpcd /system/bin/ccci_rpcd 0
     user radio
-    group radio cache inet misc
+    group radio system
     class core
+    oneshot
+
+service pppd_gprs /system/bin/pppd_dt /dev/ttyACM0 debug noauth refuse-eap usepeerdns nodetach
+    user root
+    group radio cache inet misc
+    disabled
+    oneshot
+
+#Add by T.Zh for ppp daemon
+service pppd /system/bin/pppd file /data/misc/ppp/ppp_options
+    user root
+    disabled 
     oneshot
 
 #
@@ -120,3 +143,4 @@ service terservice /system/bin/terservice
 
 on property:ril.muxreport=1
     start muxreport-daemon
+
