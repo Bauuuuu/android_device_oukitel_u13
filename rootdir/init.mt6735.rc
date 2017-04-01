@@ -60,6 +60,9 @@ on post-fs
     restorecon /dev/stpwmt
     restorecon /dev/stpbt
     restorecon /dev/stpgps
+    
+    # RIL permissions fix
+    chmod 0644 /proc/cmdline
 
     # GPS
     chmod 0660 /dev/gps
