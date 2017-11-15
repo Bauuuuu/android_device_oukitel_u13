@@ -93,7 +93,8 @@ TARGET_SPECIFIC_HEADER_PATH := device/oukitel/u13/include
 BOARD_SECCOMP_POLICY := $(LOCAL_PATH)/seccomp
 
 # MTK Hardware
-BOARD_HAS_MTK_HARDWARE := true
+MTK_HARDWARE := true
+BOARD_USES_MTK_HARDWARE := true
 
 # Display
 USE_OPENGL_RENDERER := true
@@ -124,9 +125,6 @@ BOARD_HAVE_BLUETOOTH := true
 
 # Charger
 BACKLIGHT_PATH := /sys/class/leds/lcd-backlight/brightness
-
-# Recovery
-#RECOVERY_VARIANT := twrp
 
 # TWRP
 ifeq ($(RECOVERY_VARIANT), twrp)
